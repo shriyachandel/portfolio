@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import "./Header.css";
+import "./css/Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

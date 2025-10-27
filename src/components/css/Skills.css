@@ -1,0 +1,196 @@
+.skills-section {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 70px 50px;
+}
+
+h2.skills-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.skills-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 80px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.skills-intro {
+  flex: 1;
+  min-width: 300px;
+}
+
+.skills-intro h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.skills-intro h2 span {
+  color: #61dafb;
+}
+
+.skills-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* EXPERIENCE TABLE */
+.experience-table {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-row {
+  display: flex;
+  gap: 20px;
+  background: #141414;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #1f1f1f;
+  transition: all 0.3s ease;
+}
+
+.experience-row:hover {
+  border-color: #61dafb;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
+  transform: translateY(-3px);
+}
+
+.exp-year {
+  width: 40%;
+  font-weight: 600;
+  color: #61dafb;
+}
+
+.exp-details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.exp-details p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+/* BOTTOM SECTION */
+.skills-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* --- MY SKILLS BOXES --- */
+.skills-boxes {
+  flex: 1;
+  min-width: 300px;
+}
+
+.skills-boxes h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #141414;
+  border: 1px solid #61dafb;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
+}
+
+.skill-card:hover {
+  border-color: #61dafb;
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
+  transform: translateY(-5px);
+  color: #61dafb;
+}
+
+/* --- HIRE BOX --- */
+.hire-box {
+  flex: 1;
+  min-width: 300px;
+  background: #141414;
+  border: 1px solid #1f1f1f;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hire-box:hover {
+  border-color: #61dafb;
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+}
+
+.hire-box h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #61dafb;
+}
+
+.hire-box p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hire-btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hire-btn:hover {
+      transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 114, 255, 0.6);
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-top,
+  .skills-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp-year {
+    width: 100%;
+  }
+}

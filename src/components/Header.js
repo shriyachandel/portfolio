@@ -45,6 +45,17 @@ const Header = () => {
           </li>
           <li>
             <Link
+              to="skills"
+              smooth={true}
+              duration={800}
+              offset={offset}
+              onClick={handleLinkClick}
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
               to="projects"
               smooth={true}
               duration={800}

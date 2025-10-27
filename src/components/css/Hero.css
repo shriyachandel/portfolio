@@ -7,7 +7,7 @@
   overflow: hidden;
   background-color: #000;
   color: #fff;
-  padding: 0 40px;
+  padding: 140px 40px 0px;
 }
 
 .hero-canvas {
@@ -123,6 +123,9 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .hero {
+    padding-top: 100px;
+  }
   .hero-inner {
     flex-direction: column;
     text-align: center;

@@ -1,27 +1,78 @@
 .about {
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 90px 20px;
   text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.about-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Underline style */
+.about-line {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  margin: 0 auto 35px;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(255, 126, 95, 0.5);
 }
 
 .about p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.8;
-  color: #333;
+  color: #dcdcdc;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .about h2 {
-    font-size: 2rem;
+.highlight {
+  color: #ffb347;
+  font-weight: 600;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 50px 20px;
+  }
+
+  .about-heading {
+    font-size: 2.3rem;
+  }
+
   .about p {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .about-line {
+    width: 90px;
   }
 }

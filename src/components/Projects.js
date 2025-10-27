@@ -6,10 +6,10 @@ const Projects = () => {
     {
       name: "Portfolio Website",
       description: "A personal portfolio built with React and CSS.",
-      image: "/Gemini_Generated_Image_mlq69cmlq69cmlq6.png", // image url
+      image: "/Gemini_Generated_Image_mlq69cmlq69cmlq6.png",
       tech: ["React", "CSS", "JavaScript"],
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
     },
     {
       name: "E-commerce App",
@@ -17,7 +17,7 @@ const Projects = () => {
       image: "/Gemini_Generated_Image_ioostzioostzioos.png",
       tech: ["React", "Firebase", "CSS"],
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
     },
     {
       name: "ToDo App",
@@ -25,17 +25,21 @@ const Projects = () => {
       image: "/Gemini_Generated_Image_sdl0kqsdl0kqsdl0.png",
       tech: ["React", "Hooks", "CSS"],
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
     },
   ];
 
   return (
-    <section id="projects" data-aos="fade-up" className="projects">
-      <h2>My Projects</h2>
+    <section id="projects" className="projects">
+      <h2 className="projects-heading">My Projects</h2>
+      <div className="projects-line"></div>
+
       <div className="project-container">
         {projectList.map((project, index) => (
           <div key={index} className="project-card">
-            <img src={project.image} alt={project.name} />
+            <div className="project-img-wrap">
+              <img src={project.image} alt={project.name} />
+            </div>
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <div className="tech-badges">

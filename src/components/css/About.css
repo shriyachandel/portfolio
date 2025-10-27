@@ -18,7 +18,15 @@
   position: relative;
   margin-bottom: 15px;
 }
-
+.about-container h2:after {
+    background: linear-gradient(90deg,#61dafb,#0072ff);
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 10px auto 30px;
+    width: 120px;
+}
 /* Underline style */
 .about-line {
   width: 120px;

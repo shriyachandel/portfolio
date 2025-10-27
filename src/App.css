@@ -37,3 +37,13 @@
     transform: rotate(360deg);
   }
 }
+/* Scroll offset fix for anchor links */
+section {
+  scroll-margin-top: 120px; /* equal to or slightly more than header height */
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 90px;
+  }
+}

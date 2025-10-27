@@ -4,21 +4,25 @@ import "./css/Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [offset, setOffset] = useState(-120);
 
-  // 👉 Sticky Header effect on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      const header = document.querySelector(".header");
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
+    const updateOffset = () => {
+      if (window.innerWidth <= 768) {
+        setOffset(-90);
       } else {
-        header.classList.remove("scrolled");
+        setOffset(-120);
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    updateOffset();
+    window.addEventListener("resize", updateOffset);
+    return () => window.removeEventListener("resize", updateOffset);
   }, []);
+
+  // 👉 Function: Close menu after clicking a link
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header className="header">
@@ -28,9 +32,39 @@ const Header = () => {
 
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-          <li><Link to="projects" smooth={true} duration={800}>Projects</Link></li>
-          <li><Link to="contact" smooth={true} duration={800}>Contact</Link></li>
+          <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={offset}
+              onClick={handleLinkClick}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={800}
+              offset={offset}
+              onClick={handleLinkClick}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={800}
+              offset={offset}
+              onClick={handleLinkClick}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
 

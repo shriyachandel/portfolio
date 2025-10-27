@@ -19,42 +19,55 @@ html, body {
   padding-right: 30px;
   background-color: #070707;
   color: white;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   flex-wrap: wrap;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background 0.3s ease;
   border-bottom: 0.5px solid #333;
+  transition: all 0.3s ease;
+}
+
+/* When scrolling */
+.header.scrolled {
+  background: rgba(7, 7, 7, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Logo */
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
 .logo img {
-  height: 120px; /* apna desired height set karo */
+  height: 110px;
   width: auto;
   object-fit: contain;
 }
+
 /* Navigation desktop */
 .nav ul {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   list-style: none;
 }
 
 .nav a {
   text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s, transform 0.2s;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  border-radius: 30px;
 }
 
 .nav a:hover {
   color: #61dafb;
-  transform: scale(1.05);
+  background: #000000;
+  border-color: #61dafb;
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
+  transform: translateY(-3px);
 }
 
 /* Hamburger menu hidden on desktop */
@@ -97,18 +110,17 @@ html, body {
 
   .nav {
     position: absolute;
-    top: 60px;
+    top: 100px;
     left: 0;
     width: 100%;
-    background-color: #282c34;
+    background-color: #0a0a0a;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease-in-out;
-    
   }
 
   .nav.open {
-    max-height: 300px; /* enough to show all links */
+    max-height: 300px;
   }
 
   .nav ul {
@@ -119,24 +131,7 @@ html, body {
   }
 
   .nav a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    display: inline-block;
   }
 }
-
-/* Sticky behavior */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/* When scrolling */
-.header.scrolled {
-  background: rgba(7, 7, 7, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-

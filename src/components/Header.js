@@ -7,7 +7,10 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">Shriya Chandel</div>
+      <div className="logo">
+        <img src="/shrii.jpeg" alt="Shriya Chandel" />
+       
+        </div>
 
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>

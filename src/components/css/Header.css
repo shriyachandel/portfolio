@@ -15,8 +15,9 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #282c34;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #070707;
   color: white;
   position: relative;
   width: 100%;
@@ -24,6 +25,7 @@ html, body {
   flex-wrap: wrap;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: background 0.3s ease;
+  border-bottom: 0.5px solid #333;
 }
 
 /* Logo */
@@ -31,7 +33,11 @@ html, body {
   font-size: 1.8rem;
   font-weight: bold;
 }
-
+.logo img {
+  height: 120px; /* apna desired height set karo */
+  width: auto;
+  object-fit: contain;
+}
 /* Navigation desktop */
 .nav ul {
   display: flex;
@@ -81,6 +87,10 @@ html, body {
 
 /* Responsive - mobile */
 @media (max-width: 768px) {
+  .logo img {
+    height: 90px;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -94,7 +104,7 @@ html, body {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease-in-out;
-    border-top: 1px solid #444;
+    
   }
 
   .nav.open {
@@ -112,3 +122,5 @@ html, body {
     font-size: 1.2rem;
   }
 }
+
+

@@ -32,8 +32,6 @@ const Skills = () => {
 
   const skills = [
     { name: "Shopify" },
-    { name: "Stripo" },
-    { name: "Brevo" },
     { name: "Wordpress" },
     { name: "HTML" },
     { name: "CSS" },

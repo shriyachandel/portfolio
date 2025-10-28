@@ -31,25 +31,20 @@ const Skills = () => {
   ];
 
   const skills = [
-// 🛍️ E-commerce & CMS
     { name: "Shopify" },
-    { name: "WordPress" },
     { name: "Stripo" },
     { name: "Brevo" },
-
-    // 💻 Front-End
+    { name: "Wordpress" },
     { name: "HTML" },
     { name: "CSS" },
-    { name: "JavaScript" },
-    { name: "jQuery" },
+    { name: "JQuery" },
     { name: "AJAX" },
-    { name: "React.js" },
-
-    // ⚙️ Back-End
+    { name: "JavaScript" },
     { name: "PHP" },
-
-    // 🔧 Tools
+    { name: "React JS" },
     { name: "Git / GitHub" },
+    
+    
 
   ];
 

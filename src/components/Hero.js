@@ -76,8 +76,7 @@ const Hero = () => {
             Hi, I’m <span className="glow-text">Shriya Chandel</span>
           </h1>
           <p className="subtitle">
-            A passionate <span>React Developer</span> crafting smooth and
-            creative web experiences.
+            <span>Shopify Developer</span> | Learning <span>React</span> to build modern, dynamic web experiences.
           </p>
           <a href="#projects" className="hero-btn">
             Explore My Work

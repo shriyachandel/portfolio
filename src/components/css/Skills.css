@@ -34,6 +34,15 @@ h2.skills-heading {
   margin-bottom: 20px;
 }
 
+.skills-section h2:after {
+    background: linear-gradient(90deg,#61dafb,#0072ff);
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 10px auto 30px;
+    width: 120px;
+}
 .skills-intro h2 span {
   color: #61dafb;
 }
@@ -78,11 +87,17 @@ h2.skills-heading {
 .exp-details h4 {
   font-size: 1.2rem;
   margin-bottom: 5px;
+  text-align: justify;
+}
+
+.skills-intro p span {
+    color: #ffb347;
 }
 
 .exp-details p {
   color: #aaa;
   font-size: 0.95rem;
+  text-align: justify;
 }
 
 /* BOTTOM SECTION */

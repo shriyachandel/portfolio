@@ -4,36 +4,53 @@ import "./css/Skills.css";
 const Skills = () => {
   const experiences = [
     {
-      year: "Jan 2021 - Present",
-      title: "Creative Director",
-      company: "pxdraft Ltd, UK",
+      year: "Dec 2024 - Present",
+      title: "Shopify Developer",
+      company: "Freelance / Remote ",
     },
     {
-      year: "Feb 2020 - Dec 2020",
-      title: "Frontend Developer",
-      company: "Web Studio, India",
+      year: "Jan 2022 - Dec 2024",
+      title: "PHP Web Developer",
+      company: "KasWebtech Solutions Pvt. Ltd.",
     },
     {
-      year: "2019 - 2020",
-      title: "UI/UX Designer",
-      company: "Freelance Projects",
+      year: "Oct 2021 - Dec 2021",
+      title: "PHP Web Developer",
+      company: "Esferasoft Solutions Pvt Ltd.",
     },
     {
-      year: "2018 - 2019",
-      title: "Intern Developer",
-      company: "TechSoft Pvt Ltd",
+      year: " Jan 2021 - June 2021",
+      title: "Mean Stack Intern Developer",
+      company: "Impinge Solutions",
+    },
+    {
+      year: "Sep 2018 - Feb 2019",
+      title: "PHP Intern Developer",
+      company: "Local Training Institute",
     },
   ];
 
   const skills = [
-    { name: "React" },
-    { name: "JavaScript" },
+// 🛍️ E-commerce & CMS
+    { name: "Shopify" },
+    { name: "WordPress" },
+    { name: "Stripo" },
+    { name: "Brevo" },
+
+    // 💻 Front-End
     { name: "HTML" },
     { name: "CSS" },
-    { name: "Node.js" },
+    { name: "JavaScript" },
+    { name: "jQuery" },
+    { name: "AJAX" },
+    { name: "React.js" },
+
+    // ⚙️ Back-End
+    { name: "PHP" },
+
+    // 🔧 Tools
     { name: "Git / GitHub" },
-    { name: "Figma" },
-    { name: "Shopify" },
+
   ];
 
   return (
@@ -49,9 +66,7 @@ const Skills = () => {
             <span>Experience</span>
           </h2>
           <p>
-            I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites, web services, and
-            online stores.
+            Experienced <span>Shopify Developer </span> skilled in creating custom themes, enhancing store performance, and delivering smooth, high-converting e-commerce experiences. Currently, I’m expanding my skills by learning React.js to build modern, dynamic web applications.
           </p>
         </div>
 

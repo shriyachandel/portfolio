@@ -73,7 +73,7 @@ const Hero = () => {
       <div className="hero-inner">
         <div className="hero-left">
           <h1>
-            Hi, I’m <span className="glow-text">Shriya Chandel</span>
+            Hi, I’m <span className="glow-text">Shriya</span>
           </h1>
           <p className="subtitle">
             <span>Shopify Developer</span> | Learning <span>React</span> to build modern, dynamic web experiences.
@@ -85,7 +85,7 @@ const Hero = () => {
         <div className="hero-right">
           <img
             src="/designer.png"
-            alt="Shriya Chandel"
+            alt="Shriya"
             className="hero-image"
           />
         </div>

@@ -162,6 +162,27 @@ h2.skills-heading {
   border-color: #61dafb;
   box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
 }
+/* --- HIRE BOX BUTTON GROUP --- */
+.hire-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Outline version of hire button (for Download CV) */
+.hire-btn.outline {
+  background: transparent;
+  border: 1px solid #61dafb;
+  color:  #fff;
+  transition: all 0.3s ease;
+}
+
+.hire-btn.outline:hover {
+  background: #141414;
+  color: #61dafb;
+  box-shadow: 0 0 30px rgba(0, 114, 255, 0.5);
+}
 
 .hire-box h3 {
   font-size: 2rem;

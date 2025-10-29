@@ -40,7 +40,8 @@ const Skills = () => {
     { name: "JavaScript" },
     { name: "PHP" },
     { name: "React JS" },
-    { name: "Git / GitHub" },
+    { name: "GitHub" },
+    { name: "Stripo" },
     
     
 
@@ -91,16 +92,23 @@ const Skills = () => {
         </div>
 
         {/* RIGHT - HIRE ME */}
-        <div className="hire-box">
-          <h3>Hire Me</h3>
-          <p>
-            I am available for freelance projects and full-time positions. Let's
-            work together to create something amazing!
-          </p>
-          <a href="#contact" className="hire-btn">
-            Let's Talk
-          </a>
-        </div>
+        {/* RIGHT - HIRE ME */}
+<div className="hire-box">
+  <h3>Hire Me</h3>
+  <p>
+    I am available for freelance projects and full-time positions. Let's
+    work together to create something amazing!
+  </p>
+  <div className="hire-actions">
+    <a href="#contact" className="hire-btn">
+      Hire Me
+    </a>
+    <a href="/shriya-cv.pdf" download className="hire-btn outline">
+      Download CV
+    </a>
+  </div>
+</div>
+
       </div>
     </section>
   );

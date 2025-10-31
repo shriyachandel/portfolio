@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./css/Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("https://script.google.com/macros/s/AKfycbx9jlci94pcZE9dRS-Iv23pHCSsBenIsrA9cEe-a7YZCLxm6aJBHC3lzhsSzVYE5LiI/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    })
+      .then((res) => {
+        if (res.ok) {
+          alert("✅ Message sent successfully!");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        } else {
+          alert("⚠️ Failed to send message. Try again.");
+        }
+      })
+      .catch(() => alert("❌ Something went wrong."));
+  };
+
   return (
     <section id="contact" className="contact">
       <h2>Get In Touch</h2>
@@ -31,12 +60,41 @@ const Contact = () => {
         </div>
 
         {/* RIGHT SIDE - FORM */}
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-         <input type="tel" placeholder="Your Phone Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"
-                required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone Number"
+            pattern="[0-9]{10}"
+            title="Please enter a valid 10-digit phone number"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
